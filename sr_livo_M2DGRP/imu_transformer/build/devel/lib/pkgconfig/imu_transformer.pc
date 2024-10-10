@@ -1,0 +1,8 @@
+prefix=/media/zjj/Newsmy/linux/sr_livo/src/imu_transformer/build/devel
+
+Name: imu_transformer
+Description: Description of imu_transformer
+Version: 0.3.1
+Cflags: -I/media/zjj/Newsmy/linux/sr_livo/src/imu_transformer/include
+Libs: -L${prefix}/lib -limu_transformer_nodelet
+Requires: roscpp message_filters nodelet sensor_msgs tf2 tf2_ros geometry_msgs topic_tools

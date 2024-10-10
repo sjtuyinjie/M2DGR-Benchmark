@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libgmock.so -o ../lib/libgmock.so CMakeFiles/gmock.dir/src/gmock-all.cc.o  -Wl,-rpath,/media/zjj/Newsmy/linux/sr_livo/src/livox_ros_driver/build/gtest/lib ../lib/libgtest.so -lpthread 
