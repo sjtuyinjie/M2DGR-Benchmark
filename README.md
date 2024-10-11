@@ -1,4 +1,4 @@
-感谢提醒！我会将算法的链接以合适的方式嵌入到相应的算法名称中，重新展示如下：
+
 
 # M2DGR-Benchmark
 
@@ -67,3 +67,33 @@ This project adapts leading LiDAR, Visual, and sensor-fusion SLAM systems to the
 
 
 Explore these methods to see how they perform on the M2DGR and M2DGR-plus datasets!
+
+
+
+## License
+
+If you use this work in an academic work, please cite:
+~~~
+@article{yin2021m2dgr,
+  title={M2dgr: A multi-sensor and multi-scenario slam dataset for ground robots},
+  author={Yin, Jie and Li, Ang and Li, Tao and Yu, Wenxian and Zou, Danping},
+  journal={IEEE Robotics and Automation Letters},
+  volume={7},
+  number={2},
+  pages={2266--2273},
+  year={2021},
+  publisher={IEEE}
+}
+
+@article{yin2024ground,
+  title={Ground-Fusion: A Low-cost Ground SLAM System Robust to Corner Cases},
+  author={Yin, Jie and Li, Ang and Xi, Wei and Yu, Wenxian and Zou, Danping},
+  journal={arXiv preprint arXiv:2402.14308},
+  year={2024}
+}
+~~~
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=sjtuyinjie/M2DGR-Benchmark&type=Timeline)](https://star-history.com/#Ashutosh00710/github-readme-activity-graph&Timeline)
