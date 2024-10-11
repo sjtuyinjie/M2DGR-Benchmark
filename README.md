@@ -3,57 +3,67 @@
 **Authors:** Junjie Zhang (张骏杰), Deteng Zhang (张德腾), Yan Sun (孙岩), and [Jie Yin (殷杰)](https://sjtuyinjie.github.io/)*
 
 
-The **M2DGR-Benchmark** is built upon the M2DGR and M2DGR-plus datasets and integrates state-of-the-art SLAM algorithms. 
+
+The **M2DGR-Benchmark** integrates state-of-the-art SLAM algorithms with the M2DGR and M2DGR-plus datasets. 
 
 - [**M2DGR**](https://github.com/SJTU-ViSYS/M2DGR): A Multi-modal and Multi-scenario SLAM Dataset for Ground Robots (RA-L & ICRA 2022).
 - [**M2DGR-plus**](https://github.com/SJTU-ViSYS/M2DGR-plus): An extension of M2DGR (ICRA 2022 & ICRA 2024).
 
-This project adapts cutting-edge LiDAR, Visual, and sensor-fusion SLAM systems to these datasets, aiming to support the research community in advancing SLAM technologies.
-
-Extensive evaluations of various open-source projects on M2DGR/M2DGR-plus are available. For more details, please refer to the `README.txt` file within the respective project folders.
+This project adapts leading LiDAR, Visual, and sensor-fusion SLAM systems to these datasets, facilitating research and development in SLAM technologies. Detailed evaluations of open-source projects on M2DGR/M2DGR-plus are available in the respective project folders.
 
 
 
-## LiDAR-based Methods:
+## LiDAR-based Methods
 
 - **A-LOAM**  
-  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/A_LOAM_M2DGRP) in the `A_LOAM_M2DGRP` folder.
+  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/A_LOAM_M2DGRP) in the `A_LOAM_M2DGRP` folder.  
+  *Description*: A-LOAM is an advanced implementation of the LOAM (Lidar Odometry and Mapping) algorithm, which simplifies code structure using Eigen and Ceres Solver. A-LOAM is clean, concise, and well-suited for SLAM beginners.
 
 - **LINS**  
-  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LINS_M2DGRP) in the `LINS` folder.
+  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LINS_M2DGRP) in the `LINS` folder.  
+  *Description*: LINS is a tightly-coupled lidar-inertial odometry and mapping system designed for robust real-time performance, especially in feature-less environments. It integrates IMU data with LiDAR scans to improve mapping and localization accuracy, particularly with Velodyne VLP-16.
 
 - **LIO-SAM**  
-  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LIO_Sam_M2DGRP) in the `LIO_Sam_M2DGRP` folder.
+  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LIO_Sam_M2DGRP) in the `LIO_Sam_M2DGRP` folder.  
+  *Description*: LIO-SAM is a real-time lidar-inertial odometry system that uses two factor graphs: one for optimizing lidar odometry and GPS data, and another for IMU data. This dual-graph system enables fast, accurate odometry and efficient map optimization.
 
-- **Lego-LOAM**  
-  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/Lego_loam_M2DGRP) in the `Lego_loam_M2DGRP` folder.
+- **LeGO-LOAM**  
+  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/Lego_loam_M2DGRP) in the `Lego_loam_M2DGRP` folder.  
+  *Description*: LeGO-LOAM is a lightweight, ground-optimized lidar odometry and mapping system, designed for unmanned ground vehicles (UGVs). It provides real-time 6D pose estimation using a Velodyne VLP-16 LiDAR and optional IMU data.
 
 
-## Vision-based Methods:
+
+## Vision-based Methods
 
 - **VINS-Mono**  
-  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/vins_momo_M2DGRP) in the `vins_momo_M2DGRP` folder.
+  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/vins_momo_M2DGRP) in the `vins_momo_M2DGRP` folder.  
+  *Description*: VINS-Mono is a real-time monocular visual-inertial SLAM framework. It provides high-accuracy visual-inertial odometry using an optimization-based sliding window method, along with features like loop detection, failure recovery, and global pose graph optimization.
 
 
-## LiDAR-Visual Fusion Methods:
+
+## LiDAR-Visual Fusion Methods
 
 - **FAST-LIVO**  
-  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/FAST_livo_M2DGRP) in the `FAST_livo_M2DGRP` folder.
+  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/FAST_livo_M2DGRP) in the `FAST_livo_M2DGRP` folder.  
+  *Description*: FAST-LIVO is a fast LiDAR-Inertial-Visual odometry system that registers raw point clouds and uses direct photometric alignment to minimize visual errors. It ensures robust odometry by tightly coupling the visual and lidar subsystems without relying on traditional feature extraction.
 
 - **LVI-SAM**  
-  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LVI_Sam_M2DGRP) in the `LVI_Sam_M2DGRP` folder.
+  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LVI_Sam_M2DGRP) in the `LVI_Sam_M2DGRP` folder.  
+  *Description*: LVI-SAM combines the strengths of LIO-SAM and VINS-Mono to provide a robust, real-time SLAM system. It integrates lidar, visual, and inertial data for efficient odometry and mapping.
 
 - **R2LIVE**  
-  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/r2live_M2DGRP) in the `r2live_M2DGRP` folder.
+  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/r2live_M2DGRP) in the `r2live_M2DGRP` folder.  
+  *Description*: R2LIVE is a tightly-coupled, real-time LiDAR-Inertial-Visual odometry and mapping system. It provides robust state estimation through precise sensor fusion and operates efficiently in challenging environments.
 
 - **R3LIVE**  
-  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/r3live_M2DGRP) in the `r3live_M2DGRP` folder.
+  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/r3live_M2DGRP) in the `r3live_M2DGRP` folder.  
+  *Description*: R3LIVE builds upon R2LIVE, integrating both visual-inertial and lidar-inertial odometry for accurate state estimation. The system creates highly detailed 3D maps by combining lidar data for geometry and visual data for texture.
 
 - **SR-LIVO**  
-  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/sr_livo_M2DGRP) in the `sr_livo_M2DGRP` folder.
+  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/sr_livo_M2DGRP) in the `sr_livo_M2DGRP` folder.  
+  *Description*: SR-LIVO, based on R3LIVE, introduces sweep reconstruction to better align lidar data with image timestamps. This technique improves both pose accuracy and computational efficiency, resulting in precise colored point cloud maps.
 
 
 
 
-
-Feel free to explore each method for detailed implementation and benchmark results!
+Explore these methods to see how they perform on the M2DGR and M2DGR-plus datasets!
