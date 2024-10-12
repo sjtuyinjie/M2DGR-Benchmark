@@ -1,19 +1,13 @@
 # A-LOAM
 
+A-LOAM在MRDGR和M2DGR—plus上只需要更改yaml文件即可。  
 
-## run
-Clone the repository and catkin_make:
-
+## run M2DGR-plus
+在加入正确的yaml文件编译后
 ```
-    cd ~/catkin_ws/src
-    git clone https://github.com/HKUST-Aerial-Robotics/A-LOAM.git
-    cd ../
-    catkin_make
-    source ~/catkin_ws/devel/setup.bash
     source devel/setup.bash
     roslaunch aloam_velodyne aloam_velodyne_VLP_16.launch
-    # 在bag所在文件夹下打开终端，开始播放数据集：
     rosbag play xx.bag /rslidar_points:=/velodyne_point
 ```
-
+![aloam_tree3](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/A_LOAM_M2DGRP/image/2024-10-09%2021-06-38%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png)
 
