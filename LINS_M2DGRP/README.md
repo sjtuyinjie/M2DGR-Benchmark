@@ -6,7 +6,17 @@ M2DGR-plus的激光雷达话题`/rslidar_points`不包含`ring`和`time`的信�
 
 ## Compile
 ```
-git clone 
+git clone https://github.com/sjtuyinjie/M2DGR-Benchmark.git M2DGR-Benchmark/LINS_M2DGRP
+
+```
+
+## run M2DGR example
+```
+source devel/setup.bash
+
+roslaunch lins run_m2dgr.launch
+
+rosbag play door_02.bag --clock --topic /rslidar_points /camera/color/image_raw /camera/imu
 ```
 
 ## run M2DGR-plus example
