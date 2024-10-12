@@ -6,7 +6,7 @@ M2DGR-plus的激光雷达话题`/rslidar_points`不包含`ring`和`time`的信�
 
 ## Compile
 ```
-git clone https://github.com/sjtuyinjie/M2DGR-Benchmark.git M2DGR-Benchmark/LINS_M2DGRP
+git clone https://github.com/sjtuyinjie/M2DGR-Benchmark.git && cd M2DGR-Benchmark && git sparse-checkout set --no-cone LINS_M2DGRP
 
 ```
 
