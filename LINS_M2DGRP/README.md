@@ -20,7 +20,7 @@ roslaunch lins run_m2dgr.launch
 
 rosbag play door_02.bag --clock
 ```
-![LINS_door](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LINS_M2DGRP/image/2024-10-10%2020-20-09%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png)
+![LINS_door](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LINS_M2DGRP/image/Peek%202024-10-13%2011-49.gif)
 
 ## run M2DGR-plus example
 ```
@@ -37,4 +37,4 @@ rosrun rs_to_velodyne rs_to_velodyne m2dgrplus XYZIRT
 
 rosbag play tree3.bag --clock --topic /rslidar_points /camera/color/image_raw /camera/imu
 ```
-![LINS_tree3](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LINS_M2DGRP/image/2024-10-10%2020-20-09%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png)
+![LINS_tree3](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LINS_M2DGRP/image/plus.gif)
