@@ -1,6 +1,9 @@
 # A-LOAM
 
-A-Loam only needs to change the lidar topic as `/velodyne_point` on MRDGR and M2DGR-Plus.
+A-Loam only needs to change the lidar topic as `/velodyne_point` on MRDGR and M2DGR-Plus. 
+
+## Compile
+Please see the [link](https://github.com/HKUST-Aerial-Robotics/A-LOAM) for code and compilation.
 
 ## run M2DGR example
 ```
@@ -14,7 +17,7 @@ A-Loam only needs to change the lidar topic as `/velodyne_point` on MRDGR and M2
 ```
     source devel/setup.bash
     roslaunch aloam_velodyne aloam_velodyne_VLP_16.launch
-    rosbag play tree3.bag /rslidar_points:=/velodyne_point
+    rosbag play tree3.bag /rslidar_points:=/velodyne_points
 ```
 ![aloam_tree3](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/A_LOAM_M2DGRP/image/2024-10-09%2021-06-38%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png)
 
