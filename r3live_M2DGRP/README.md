@@ -1,4 +1,5 @@
-# compile
+# R3live
+## Dependency
 ```
 //安装livox_SDK
 git clone https://github.com/Livox-SDK/Livox-SDK.git
@@ -11,17 +12,26 @@ sudo apt-get install libcgal-dev pcl-tools//安装CGAL
 sudo apt-get install ros-noetic-tf2-sensor-msgs // 安装tf2
 catkin_make
 ```
-# run
+## Compile
 
-##  m2dgr
+```
+cd ~/catkin_ws/src
+git clone https://github.com/sjtuyinjie/M2DGR-Benchmark.git && cd M2DGR-Benchmark && git sparse-checkout set --no-cone r3live_M2DGRP
+cd ../..
+catkin_make
+```
+
+## Run M2DGR example
+
 ```
 source devel/setup.bash
+
 roslaunch r3live r3live_m2dgr.launch
-rosbag play xx.bag
+
+rosbag play door_02.bag
 ```
 
-##  m2dgr-plus
-该方法将Robosense转换为velodyne雷达话题格式发布，包含ring、time
+## Run M2DGR-plus example
 ```
 source devel/setup.bash
 roslaunch r3live r3live_m2dgr_plus_v.launch
@@ -37,3 +47,4 @@ rosrun rs_to_velodyne rs_to_velodyne m2dgrplus XYZIRT
 rosbag play tree3.bag --topic /rslidar_points /camera/color/image_raw /camera/imu
 
 ```
+

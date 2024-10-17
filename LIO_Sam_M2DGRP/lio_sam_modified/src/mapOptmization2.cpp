@@ -48,7 +48,7 @@ using FactorParam = Eigen::Matrix<double, 3, 4>;
 class mapOptimization : public ParamServer
 {
 
-public:
+ public:
     // gtsam
     NonlinearFactorGraph gtSAMgraph;
     Values initialEstimate;

@@ -12,7 +12,7 @@ cd ../..
 catkin_make
 ```
 
-## run M2DGR example
+## Run M2DGR example
 ```
 source devel/setup.bash
 
@@ -22,7 +22,7 @@ rosbag play door_02.bag --clock
 ```
 ![LINS_door](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LINS_M2DGRP/image/Peek%202024-10-13%2011-49.gif)
 
-## run M2DGR-plus example
+## Run M2DGR-plus example
 ```
 source devel/setup.bash
 roslaunch lins run_m2dgr_plus.launch
@@ -38,3 +38,4 @@ rosrun rs_to_velodyne rs_to_velodyne m2dgrplus XYZIRT
 rosbag play tree3.bag --clock --topic /rslidar_points /camera/color/image_raw /camera/imu
 ```
 ![LINS_tree3](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LINS_M2DGRP/image/plus.gif)
+

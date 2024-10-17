@@ -1,4 +1,20 @@
-##  m2dgr-plus
+# FAST-Livo
+
+## Compile
+```
+cd ~/catkin_ws/src
+git clone https://github.com/sjtuyinjie/M2DGR-Benchmark.git && cd M2DGR-Benchmark && git sparse-checkout set --no-cone FAST_livo_M2DGRP
+cd ../..
+catkin_make
+```
+##  Run M2DGR example
+```
+source devel/setup.bash
+roslaunch fast_livo mapping_m2dgr.launch
+rosbag play door_02.bag 
+```
+
+##  Run M2DGR-plus example
 ```
 source devel/setup.bash
 roslaunch fast_livo mapping_m2dgr_plus.launch
@@ -11,11 +27,6 @@ roslaunch imu_transformer ned_to_enu.launch
 source devel/setup.bash
 rosrun rs_to_velodyne rs_to_velodyne m2dgrplus XYZIRT
 
-rosbag play tree3.bag --topic /rslidar_points /camera/color/image_raw /camera/imu
+rosbag play anomaly.bag --topic /rslidar_points /camera/color/image_raw /camera/imu
+```
 
-```
-##  m2dgr
-```
-roslaunch fast_livo mapping_m2dgr.launch
-rosbag play door_02.bag 
-```

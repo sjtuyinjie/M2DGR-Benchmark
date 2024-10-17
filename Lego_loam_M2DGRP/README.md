@@ -27,17 +27,22 @@ You can use the following commands to download and compile the package.
 
 ```
 cd ~/catkin_ws/src
-git clone 
-cd ..
+git clone https://github.com/sjtuyinjie/M2DGR-Benchmark.git && cd M2DGR-Benchmark && git sparse-checkout set --no-cone LIO_Sam_M2DGRP
+cd ../..
 catkin_make
+```
+## Run M2DGR example：
+```
+//todo: add .yaml file
+```
+
+## Run M2DGR-plus example：
+```
 source devel/setup.bash
 
-# lidar：
 roslaunch lego_loam run.launch
-rosbag play tree3.bag --clock --topics /rslidar_points /rslidar_points:=/velodyne_points
 
-# todo：imu+lidar：
-roslaunch lego_loam run.launch
-rosbag play tree3.bag --clock --topics /rslidar_points /rslidar_points:=/velodyne_points
+rosbag play tree3.bag --clock --topics /rslidar_points /rslidar_points:=/velodyne_points  //todo:add imu
 ```
+
 

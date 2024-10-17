@@ -1,13 +1,41 @@
-## Run the package
+# LIO_Sam
 
-1. Run the launch file:
+
+## Dependency
+livox SDK安装
 ```
+git clone https://github.com/Livox-SDK/Livox-SDK.git
+cd Livox-SDK
+cd build && cmake ..
+make
+sudo make install
+```
+## Compile
+
+```
+cd ~/catkin_ws/src
+git clone https://github.com/sjtuyinjie/M2DGR-Benchmark.git && cd M2DGR-Benchmark && git sparse-checkout set --no-cone LIO_Sam_M2DGRP
+cd ../..
 catkin_make
-source devel/setup.bash
-roslaunch lio_sam run.launch
 ```
 
-2. Play existing bag files:
+## Run M2DGR example
+
 ```
+source devel/setup.bash
+
+roslaunch lio_sam m2dgr_run.launch
+
+rosbag play door_02.bag
+```
+
+## Run M2DGR-plus example
+
+```
+source devel/setup.bash
+
+roslaunch lio_sam m2dgrplus_run.launch
+
 rosbag play tree3.bag --topic /rslidar_points /camera/imu
 ```
+

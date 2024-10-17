@@ -1,37 +1,41 @@
-# LVI-SAM/M2DGR/M2DGRM-P
+# LVI-SAM
 
+## Dependency
 ubuntu20.04
 noetic
 ceres1.14.0
 gtsam4.0.3
 opencv4
 
-## code
-lvi-sam目录下的CMakelists.txt 更改c++11为c++14
-
-所有替换
-include <opencv/cv.h> -> include <opencv2/opencv.hpp>;
-CV_RGB2GRAY->cv::COLOR_RGB2GRAY;
-CV_FONT_HERSHEY_SIMPLEX->cv::FONT_HERSHEY_SIMPLEX;
-
-LVI-SAM/src/visual_odometry/visual_loop/ThirdParty/DVision/BRIEF.cpp  添加头文件#include <opencv2/imgproc.hpp>
-[参考](https://www.guyuehome.com/35709)
-
 ## Compile
-若catkin_make崩溃，使用
+
 ```
+git clone https://github.com/sjtuyinjie/M2DGR-Benchmark.git && cd M2DGR-Benchmark && git sparse-checkout set --no-cone LVI_Sam_M2DGRP
+cd M2DGR-Benchmark/LVI_Sam_M2DGRP
+mkdir build && cd build
+cmake ..
 make -j4 
 ```
 
-## run
+## Run M2DGR example
 ```
-//M2DGR: 
-roslaunch lvi_sam my_run.launch 
-rosbag play xx.bag
-//M2DGR-P: 
-roslaunch lvi_sam plus_run.launch 
+source devel/setup.bash
+
+roslaunch lvi_sam my_run.launch
+
+rosbag play door_02.bag
+```
+
+## Run M2DGR-plus example
+```
+source devel/setup.bash
+
+roslaunch lvi_sam plus_run.launch
+
 rosbag play tree3.bag --topic /rslidar_points /camera/color/image_raw /camera/imu
 ```
+
+
 ## M2DGR-P....
 lvi-sam 需要点云格式为PointXYZIRT，M2DGR-P云格式为PointXYZI，缺少ring timestamp
 ###dense flag:
@@ -62,26 +66,4 @@ verticalAngle = atan2(thisPoint.z, sqrt(thisPoint.x * thisPoint.x + thisPoint.y 
 ```
 参考：lego-loam
 #更改后仍可运行原lvi-sam数据包，说明更改后新时间戳与ring应该不存在大问题。
-
-问题...
-现在存在参考frame不一致问题，bag文件topic播放的frame与代码参考不一致。
-
-bag文件中存在tf tree！与原算法冲突。两个base_link。
-解决： rosbag filter origin.bag dest.bag "topic != '/tf'"
-生成no_tf,bag
-可以不进行过滤，但frame存在混乱问题，一定影响精度？
-##标定
-解决，去除平移量
-rsimu2lidar=[0 0 1
-      -1 0 0
-       0 -1 0]
-
-rsimu2camera=[1 0 0
-      0 1 0
-      0 0 1]
-
-lidar2camera=[0 -1 0
-      0 0 -1
-      1 0 0]
-
 
