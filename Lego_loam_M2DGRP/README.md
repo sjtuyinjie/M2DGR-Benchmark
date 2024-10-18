@@ -44,5 +44,5 @@ roslaunch lego_loam run.launch
 
 rosbag play tree3.bag --clock --topics /rslidar_points /rslidar_points:=/velodyne_points  //todo:add imu
 ```
-
+![lego_loam_tree3](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/Lego_loam_M2DGRP/image/plus.gif)
 
