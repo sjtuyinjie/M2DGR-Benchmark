@@ -31,6 +31,7 @@ roslaunch r3live r3live_m2dgr.launch
 rosbag play door_02.bag
 ```
 ![r3live_door02](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/r3live_M2DGRP/image/Peek%202024-10-17%2022-30.gif)
+
 ## Run M2DGR-plus example
 ```
 source devel/setup.bash
