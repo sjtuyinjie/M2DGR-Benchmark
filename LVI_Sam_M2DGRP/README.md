@@ -25,7 +25,7 @@ roslaunch lvi_sam my_run.launch
 
 rosbag play door_02.bag
 ```
-
+![lvi_sam_door02](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LVI_Sam_M2DGRP/image/Peek%202024-10-13%2020-02.gif)
 ## Run M2DGR-plus example
 ```
 source devel/setup.bash
@@ -34,7 +34,7 @@ roslaunch lvi_sam plus_run.launch
 
 rosbag play tree3.bag --topic /rslidar_points /camera/color/image_raw /camera/imu
 ```
-
+![lvi_sam_tree3](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LVI_Sam_M2DGRP/image/plus.gif)
 
 ## M2DGR-P....
 lvi-sam 需要点云格式为PointXYZIRT，M2DGR-P云格式为PointXYZI，缺少ring timestamp
