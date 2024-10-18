@@ -30,7 +30,7 @@ roslaunch r3live r3live_m2dgr.launch
 
 rosbag play door_02.bag
 ```
-
+![r3live_door02](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/r3live_M2DGRP/image/Peek%202024-10-17%2022-30.gif)
 ## Run M2DGR-plus example
 ```
 source devel/setup.bash
@@ -47,4 +47,5 @@ rosrun rs_to_velodyne rs_to_velodyne m2dgrplus XYZIRT
 rosbag play tree3.bag --topic /rslidar_points /camera/color/image_raw /camera/imu
 
 ```
+![r3live_tree3](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/r3live_M2DGRP/image/plus.gif)
 
