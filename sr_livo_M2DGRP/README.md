@@ -17,6 +17,7 @@ roslaunch sr_livo livo_m2dgr.launch
 
 rosbag play door_02.bag
 ```
+![sr_livo_door02](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/sr_livo_M2DGRP/image/Peek%202024-10-17%2022-43.gif)
 
 ## Run M2DGR-plus example
 ```
@@ -34,5 +35,6 @@ rosrun rs_to_velodyne rs_to_velodyne m2dgrplus XYZIRT
 rosbag play anomaly.bag --topic /rslidar_points /camera/color/image_raw /camera/imu
 
 ```
+![sr_livo_tree3](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/sr_livo_M2DGRP/image/plus.gif)
 
 
