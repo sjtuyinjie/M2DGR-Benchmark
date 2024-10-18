@@ -28,7 +28,7 @@ roslaunch lio_sam m2dgr_run.launch
 
 rosbag play door_02.bag
 ```
-
+![lio_sam_door02](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LIO_Sam_M2DGRP/image/Peek%202024-10-13%2013-57.gif)
 ## Run M2DGR-plus example
 
 ```
@@ -38,4 +38,4 @@ roslaunch lio_sam m2dgrplus_run.launch
 
 rosbag play tree3.bag --topic /rslidar_points /camera/imu
 ```
-
+![lio_sam_tree3](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LIO_Sam_M2DGRP/image/plus.gif)
