@@ -5,7 +5,7 @@ A-Loam only needs to change the lidar topic as `/velodyne_point` on MRDGR and M2
 ## Compile
 Please see the [link](https://github.com/HKUST-Aerial-Robotics/A-LOAM) for code and compilation.
 
-## run M2DGR example
+## Run M2DGR example
 ```
     source devel/setup.bash
     roslaunch aloam_velodyne aloam_velodyne_HDL_32.launch
@@ -13,7 +13,7 @@ Please see the [link](https://github.com/HKUST-Aerial-Robotics/A-LOAM) for code 
 ```
 ![aloam_door](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/A_LOAM_M2DGRP/image/Peek%202024-10-13%2012-10.gif)
 
-## run M2DGR-plus example
+## Run M2DGR-plus example
 ```
     source devel/setup.bash
     roslaunch aloam_velodyne aloam_velodyne_VLP_16.launch
