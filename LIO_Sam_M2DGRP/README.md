@@ -1,8 +1,15 @@
-# LIO_Sam
-
-
+# [LIO_SAM](https://github.com/TixiaoShan/LIO-SAM)
+This file runs LIO-SAM on M2DGR and M2DGR-plus.
 ## Dependency
-livox SDK安装
+### 1.1 Ubuntu and ROS
+Tested with Ubuntu 20.04 and ROS Noetic.[ROS Installation](https://wiki.ros.org/ROS/Installation).
+### 1.2 [GTSAM](https://gtsam.org/get_started/)(Georgia Tech Smoothing and Mapping library)
+```
+sudo add-apt-repository ppa:borglab/gtsam-release-4.0
+sudo apt install libgtsam-dev libgtsam-unstable-dev
+```
+### 1.3 Livox SDK
+Because need to install livox_ros_driver, install the livox SDK first.
 ```
 git clone https://github.com/Livox-SDK/Livox-SDK.git
 cd Livox-SDK
