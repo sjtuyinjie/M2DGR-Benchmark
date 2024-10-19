@@ -19,7 +19,7 @@ mkdir build && cd build && cmake ..
 make
 sudo make install
 ```
-### 1.6 livox SDK
+### 1.6 Livox SDK
 Because need to install livox_ros_driver, install the livox SDK first.
 ```
 git clone https://github.com/Livox-SDK/Livox-SDK.git
