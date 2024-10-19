@@ -26,6 +26,7 @@ sudo make install -j4
 ## 2.Compile
 
 ```
+cd ~/catkin_ws/src
 git clone https://github.com/sjtuyinjie/M2DGR-Benchmark.git && cd M2DGR-Benchmark && git sparse-checkout set --no-cone LVI_Sam_M2DGRP
 cd M2DGR-Benchmark/LVI_Sam_M2DGRP
 mkdir build && cd build
