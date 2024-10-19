@@ -1,13 +1,29 @@
-# LVI-SAM
-
-## Dependency
-ubuntu20.04
-noetic
-ceres1.14.0
-gtsam4.0.3
-opencv4
-
-## Compile
+# [LVI-SAM](https://github.com/TixiaoShan/LVI-SAM)
+This code can use six-axis or nine-axis imu. If the lidar information only contains position information, manually add timestamp and ring information to it to ensure the accurate operation of the code.
+## 1.Dependency
+### 1.1 Ubuntu and ROS
+Tested with Ubuntu 20.04 and ROS Noetic.[ROS Installation](https://wiki.ros.org/ROS/Installation).
+### 1.2 [GTSAM](https://gtsam.org/get_started/)(Georgia Tech Smoothing and Mapping library)
+Tested with gtsam 4.0.3.
+```
+sudo add-apt-repository ppa:borglab/gtsam-release-4.0
+sudo apt install libgtsam-dev libgtsam-unstable-dev
+```
+### 1.3 OpenCV
+Tested with OpenCV 4.2.0 comes with ROS Noetic.[OpenCV installation](https://opencv.org/).
+### 1.4 Ceres 
+C++ library for modeling and solving large, complicated optimization problems.Tested with ceres1.14.0.
+```
+sudo apt-get install -y libgoogle-glog-dev
+sudo apt-get install -y libatlas-base-dev
+wget -O ~/Downloads/ceres.zip https://github.com/ceres-solver/ceres-solver/archive/1.14.0.zip
+cd ~/Downloads/ && unzip ceres.zip -d ~/Downloads/
+cd ~/Downloads/ceres-solver-1.14.0
+mkdir ceres-bin && cd ceres-bin
+cmake ..
+sudo make install -j4
+```
+## 2.Compile
 
 ```
 git clone https://github.com/sjtuyinjie/M2DGR-Benchmark.git && cd M2DGR-Benchmark && git sparse-checkout set --no-cone LVI_Sam_M2DGRP
@@ -17,7 +33,7 @@ cmake ..
 make -j4 
 ```
 
-## Run M2DGR example
+## 3.Run M2DGR example
 ```
 source devel/setup.bash
 
@@ -26,7 +42,7 @@ roslaunch lvi_sam my_run.launch
 rosbag play door_02.bag
 ```
 ![lvi_sam_door02](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LVI_Sam_M2DGRP/image/Peek%202024-10-13%2020-02.gif)
-## Run M2DGR-plus example
+## Run 4.M2DGR-plus example
 ```
 source devel/setup.bash
 
@@ -35,35 +51,4 @@ roslaunch lvi_sam plus_run.launch
 rosbag play tree3.bag --topic /rslidar_points /camera/color/image_raw /camera/imu
 ```
 ![lvi_sam_tree3](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LVI_Sam_M2DGRP/image/plus.gif)
-
-## M2DGR-P....
-lvi-sam 需要点云格式为PointXYZIRT，M2DGR-P云格式为PointXYZI，缺少ring timestamp
-###dense flag:
-```
-//M2DGR-P最后is dense 参数为0。在imageprojection.cpp：194 "check dense flag"会拒绝点云输入
-//采取办法：注释掉check dense flag部分
-```
-
-###ring:
-```
-//注释掉imageprojection.cpp：201 check ring channel部分
-
-/*imageprojection.cpp：525、526增加手动计算ring，注释掉int rowIdn = laserCloudIn->points[i].ring;*/
-verticalAngle = atan2(thisPoint.z, sqrt(thisPoint.x * thisPoint.x + thisPoint.y * thisPoint.y)) * 180 / M_PI;
- int rowIdn = (verticalAngle + ang_bottom) / ang_res_y;
-
-//在相应projectPointCloud()函数内增加定义
- float verticalAngle;
- const float ang_res_y = 2.5;
- const float ang_bottom = 30.0+0.1;  
- 
-```
-参考：lego-loam
-###timestamp
-```
-//注释掉imageprojection.cpp：221 check point time部分
-238～272增加手动添加时间戳部分
-```
-参考：lego-loam
-#更改后仍可运行原lvi-sam数据包，说明更改后新时间戳与ring应该不存在大问题。
 
