@@ -65,6 +65,7 @@ rosrun rs_to_velodyne rs_to_velodyne m2dgrplus XYZIRT
 rosbag play anomaly.bag --topic /rslidar_points /camera/color/image_raw /camera/imu
 
 ```
+In our tests, drifting occurred.
 ![sr_livo_tree3](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/sr_livo_M2DGRP/image/plus.gif)
 
 
