@@ -1,4 +1,5 @@
-# [FAST-LIVO](https://github.com/hku-mars/FAST-LIVO?tab=readme-ov-file)
+# [FAST-LIVO](https://github.com/hku-mars/FAST-LIVO?tab=readme-ov-file) 
+This file uses external coordinate conversion and lidar format conversion to convert the M2DGR-plus lidar and IMU to a coordinate system. Adds timestamps and ring information to the lidar data to transform `/rslidar_points` into `/velodyne_points` format.
 ##  1.Dependency
 ### 1.1 Ubuntu and ROS
 Ubuntu 20.04 and ROS Noetic.[ROS Installation](https://wiki.ros.org/ROS/Installation).
