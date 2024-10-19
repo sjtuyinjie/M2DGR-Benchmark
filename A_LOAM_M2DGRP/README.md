@@ -11,7 +11,7 @@ Please see the [link](https://github.com/HKUST-Aerial-Robotics/A-LOAM) for code 
     roslaunch aloam_velodyne aloam_velodyne_HDL_32.launch
     rosbag play door_02.bag 
 ```
-![aloam_door](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/A_LOAM_M2DGRP/image/Peek%202024-10-13%2012-10.gif)
+![aloam_door](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/A_LOAM_M2DGRP/image/Peek%202024-10-19%2012-23.gif)
 
 ## Run M2DGR-plus example
 ```
