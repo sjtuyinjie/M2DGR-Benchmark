@@ -9,7 +9,7 @@ sudo add-apt-repository ppa:borglab/gtsam-release-4.0
 sudo apt install libgtsam-dev libgtsam-unstable-dev
 ```
 ### 1.3 OpenCV
-Tested with OpenCV 4.2.0 comes with ROS Noetic.[PCL installation](https://pointclouds.org/).
+Tested with OpenCV 4.2.0 comes with ROS Noetic.[OpenCV installation](https://opencv.org/).
 
 ## 2. Compile
 ```
