@@ -2,13 +2,13 @@
 This file uses external coordinate conversion and lidar format conversion to convert the M2DGR-plus lidar and IMU to a coordinate system. Adds timestamps and ring information to the lidar data to transform `/rslidar_points` into `/velodyne_points` format.
 ##  1.Dependency
 ### 1.1 Ubuntu and ROS
-Ubuntu 20.04 and ROS Noetic.[ROS Installation](https://wiki.ros.org/ROS/Installation).
+Tested with Ubuntu 20.04 and ROS Noetic.[ROS Installation](https://wiki.ros.org/ROS/Installation).
 ### 1.2 Eigen
-Eigen 3.3.7.[Eigen Installation](https://eigen.tuxfamily.org/index.php?title=Main_Page).
+Tested with Eigen 3.3.7.[Eigen Installation](https://eigen.tuxfamily.org/index.php?title=Main_Page).
 ### 1.3 PCL
-PCL 1.10 comes with ROS Noetic.[PCL installation](https://pointclouds.org/).
+Tested with PCL 1.10 comes with ROS Noetic.[PCL installation](https://pointclouds.org/).
 ### 1.4 OpenCV
-OpenCV 4.2.0 comes with ROS Noetic.[PCL installation](https://pointclouds.org/).
+Tested with OpenCV 4.2.0 comes with ROS Noetic.[PCL installation](https://pointclouds.org/).
 ### 1.5 Sophus
 Sophus Installation for the non-templated/double-only version.
 ```
