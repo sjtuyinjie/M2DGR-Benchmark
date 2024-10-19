@@ -4,6 +4,7 @@ This file uses external coordinate conversion and lidar format conversion to con
 ### 1.1 Ubuntu and ROS
 Tested with Ubuntu 20.04 and ROS Noetic.[ROS Installation](https://wiki.ros.org/ROS/Installation).
 ### 1.2 [GTSAM](https://gtsam.org/get_started/)(Georgia Tech Smoothing and Mapping library)
+Tested with gtsam 4.0.3.
 ```
 sudo add-apt-repository ppa:borglab/gtsam-release-4.0
 sudo apt install libgtsam-dev libgtsam-unstable-dev
