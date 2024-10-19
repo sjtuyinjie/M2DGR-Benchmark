@@ -8,7 +8,7 @@ Tested with Eigen 3.3.7.[Eigen Installation](https://eigen.tuxfamily.org/index.p
 ### 1.3 PCL
 Tested with PCL 1.10 comes with ROS Noetic.[PCL installation](https://pointclouds.org/).
 ### 1.4 OpenCV
-Tested with OpenCV 4.2.0 comes with ROS Noetic.[PCL installation](https://pointclouds.org/).
+Tested with OpenCV 4.2.0 comes with ROS Noetic.[OpenCV installation](https://opencv.org/).
 ### 1.5 Sophus
 Sophus Installation for the non-templated/double-only version.
 ```
