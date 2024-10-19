@@ -1,10 +1,17 @@
-# LINS
+# [LINS](https://github.com/ChaoqinRobotics/LINS---LiDAR-inertial-SLAM)
+This file uses external coordinate conversion and lidar format conversion to convert the M2DGR-plus lidar and IMU to a coordinate system. Adds timestamps and ring information to the lidar data to transform `/rslidar_points` into `/velodyne_points` format.
+##  1.Dependency
+### 1.1 Ubuntu and ROS
+Tested with Ubuntu 20.04 and ROS Noetic.[ROS Installation](https://wiki.ros.org/ROS/Installation).
+### 1.2 [GTSAM](https://gtsam.org/get_started/)(Georgia Tech Smoothing and Mapping library)
+```
+sudo add-apt-repository ppa:borglab/gtsam-release-4.0
+sudo apt install libgtsam-dev libgtsam-unstable-dev
+```
+### 1.3 OpenCV
+Tested with OpenCV 4.2.0 comes with ROS Noetic.[PCL installation](https://pointclouds.org/).
 
-在M2DGR上运行LINS只需要更改相应的yaml文件和launch文件。
-
-M2DGR-plus的激光雷达话题`/rslidar_points`不包含`ring`和`time`的信息，所以需要对该信息进行手动添加，添加方法参考[Lego-LOAM](https://github.com/RobustFieldAutonomyLab/LeGO-LOAM)。
-
-## Compile
+## 2. Compile
 ```
 cd ~/catkin_ws/src
 git clone https://github.com/sjtuyinjie/M2DGR-Benchmark.git && cd M2DGR-Benchmark && git sparse-checkout set --no-cone LINS_M2DGRP
@@ -12,7 +19,7 @@ cd ../..
 catkin_make
 ```
 
-## Run M2DGR example
+## 3. Run M2DGR example
 ```
 source devel/setup.bash
 
@@ -22,16 +29,16 @@ rosbag play door_02.bag --clock
 ```
 ![LINS_door](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LINS_M2DGRP/image/Peek%202024-10-13%2011-49.gif)
 
-## Run M2DGR-plus example
+## 4. Run M2DGR-plus example
 ```
 source devel/setup.bash
 roslaunch lins run_m2dgr_plus.launch
 
-# 开启imu坐标转换
+//imu coordinate conversion
 source devel/setup.bash
 roslaunch imu_transformer ned_to_enu.launch
 
-# 开启lidar格式转换
+//lidar format conversion
 source devel/setup.bash
 rosrun rs_to_velodyne rs_to_velodyne m2dgrplus XYZIRT
 
