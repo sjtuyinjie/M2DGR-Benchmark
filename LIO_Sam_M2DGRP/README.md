@@ -1,6 +1,6 @@
 # [LIO_SAM](https://github.com/TixiaoShan/LIO-SAM)
 This file runs LIO-SAM on M2DGR and M2DGR-plus.
-## Dependency
+## 1.Dependency
 ### 1.1 Ubuntu and ROS
 Tested with Ubuntu 20.04 and ROS Noetic.[ROS Installation](https://wiki.ros.org/ROS/Installation).
 ### 1.2 [GTSAM](https://gtsam.org/get_started/)(Georgia Tech Smoothing and Mapping library)
@@ -17,7 +17,7 @@ cd build && cmake ..
 make
 sudo make install
 ```
-## Compile
+## 2.Compile
 
 ```
 cd ~/catkin_ws/src
@@ -26,7 +26,7 @@ cd ../..
 catkin_make
 ```
 
-## Run M2DGR example
+## 3.Run M2DGR example
 
 ```
 source devel/setup.bash
@@ -36,7 +36,7 @@ roslaunch lio_sam m2dgr_run.launch
 rosbag play door_02.bag
 ```
 ![lio_sam_door02](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/LIO_Sam_M2DGRP/image/Peek%202024-10-13%2013-57.gif)
-## Run M2DGR-plus example
+## 4.Run M2DGR-plus example
 
 ```
 source devel/setup.bash
