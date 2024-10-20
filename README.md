@@ -13,7 +13,7 @@ The **M2DGR-Benchmark** integrates state-of-the-art SLAM algorithms with the M2D
 
 This project adapts leading LiDAR, Visual, and sensor-fusion SLAM systems to these datasets, facilitating research and development in SLAM technologies. Detailed evaluations of open-source projects on M2DGR/M2DGR-plus are available in the respective project folders.
 
-
+![Example of r3live_on M2DGR door02](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/r3live_M2DGRP/image/Peek%202024-10-17%2022-30.gif)
 
 ## LiDAR-based Methods
 
