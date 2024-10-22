@@ -45,7 +45,7 @@ rosbag play door_02.bag --clock --topics /velodyne_points
 //lidar+imu
 rosbag play door_02.bag --clock --topics /velodyne_points /handsfree/imu:=/imu/data
 ```
-
+![lego_loam_door02](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/Lego_loam_M2DGRP/image/Peek%202024-10-22%2023-13.gif)
 ## 4.Run M2DGR-plus example：
 ```
 source devel/setup.bash
