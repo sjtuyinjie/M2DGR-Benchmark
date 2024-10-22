@@ -32,19 +32,31 @@ cd ../..
 catkin_make
 ```
 ## 3.Run M2DGR example：
+First, comment out lines `62-68` in the [utility.h](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/Lego_loam_M2DGRP/lego_loam_m2dgrp/include/utility.h) file and uncomment lines `71-76` to change the lidar parameters. And change line 20 to ```extern const bool useCloudRing = true;```. Recompile it.
 ```
-//todo: add .yaml file
+catkin_make
+
+source devel/setup.bash
+roslaunch lego_loam m2dgr_run.launch
+
+//lidar
+rosbag play door_02.bag --clock --topics /velodyne_points
+
+//lidar+imu
+rosbag play door_02.bag --clock --topics /velodyne_points /handsfree/imu:=/imu/data
 ```
 
 ## 4.Run M2DGR-plus example：
 ```
 source devel/setup.bash
 
-roslaunch lego_loam run.launch
+roslaunch lego_loam m2dgr_plus_run.launch
 
+//lidar
 rosbag play tree3.bag --clock --topics /rslidar_points /rslidar_points:=/velodyne_points
 
-//todo:add imu
+//lidar+imu
+rosbag play tree3.bag --clock --topics /rslidar_points /rslidar_points:=/velodyne_points /imu:=/imu/data
 ```
 ![lego_loam_tree3](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/Lego_loam_M2DGRP/image/plus.gif)
 
