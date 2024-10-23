@@ -11,7 +11,7 @@ The **M2DGR-Benchmark** integrates state-of-the-art SLAM algorithms with the M2D
 - [**M2DGR**](https://github.com/SJTU-ViSYS/M2DGR): A Multi-modal and Multi-scenario SLAM Dataset for Ground Robots (RA-L & ICRA 2022).
 - [**M2DGR-plus**](https://github.com/SJTU-ViSYS/M2DGR-plus): An extension of M2DGR (ICRA 2022 & ICRA 2024).
 
-This project adapts leading LiDAR, Visual, and sensor-fusion SLAM systems to ##both M2DGR and M2DGR-plus dataset##, facilitating research and development in SLAM technologies. Detailed installation methods of open-source projects on M2DGR/M2DGR-plus are available in the respective project folders.
+This project adapts leading LiDAR, Visual, and sensor-fusion SLAM systems to **both M2DGR and M2DGR-plus** dataset, facilitating research and development in SLAM technologies. Detailed installation methods of open-source projects on M2DGR/M2DGR-plus are available in the respective project folders.
 
 ![Example of r3live_on M2DGR door02](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/r3live_M2DGRP/image/Peek%202024-10-17%2022-30.gif)
 
