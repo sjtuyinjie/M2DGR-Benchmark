@@ -38,7 +38,7 @@ This project adapts leading LiDAR, Visual, and sensor-fusion SLAM systems to the
 ## Vision-based Methods
 
 - [**VINS-Mono**](https://github.com/HKUST-Aerial-Robotics/VINS-Mono)  
-  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/vins_momo_M2DGRP) in the `vins_mono_M2DGRP` folder.  
+  [Documentation](https://github.com/sjtuyinjie/M2DGR-Benchmark/blob/main/vins_mono_M2DGRP) in the `vins_mono_M2DGRP` folder.  
   *Description*: VINS-Mono is a real-time monocular visual-inertial SLAM framework. It provides high-accuracy visual-inertial odometry using an optimization-based sliding window method, along with features like loop detection, failure recovery, and global pose graph optimization.
 
 
