@@ -5,6 +5,8 @@
 **Authors:** Junjie Zhang (张骏杰), Deteng Zhang (张德腾), Yan Sun (孙岩), and [Jie Yin (殷杰)](https://sjtuyinjie.github.io/)*
 
 [![ C-Author](https://img.shields.io/badge/Author-Jie%20Yin-blue)](https://sjtuyinjie.github.io/)
+[![Dataset](https://img.shields.io/badge/Dataset-M2DGR-yellow)](https://github.com/SJTU-ViSYS/M2DGR)
+[![Dataset](https://img.shields.io/badge/DatasetExtension-M2DGR+%2B-green)](https://github.com/SJTU-ViSYS/M2DGR-plus)
 [![License](https://img.shields.io/badge/License-GPLv3-cyan)]()
 
 The goal of **M2DGR-Benchmark** is to **benchmark all cutting-edge SLAM systems on M2DGR/M2DGR+ datasets**! So we will keep updating  state-of-the-art SLAM systems to them.
