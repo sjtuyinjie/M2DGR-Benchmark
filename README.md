@@ -2,7 +2,7 @@
 
 # M2DGR-Benchmark
 
-**Authors:** Junjie Zhang (张骏杰), Deteng Zhang (张德腾), Yan Sun (孙岩), and [Jie Yin (殷杰)](https://sjtuyinjie.github.io/)*
+**Contributors:** Junjie Zhang (张骏杰), Deteng Zhang (张德腾), Yan Sun (孙岩), and [Jie Yin (殷杰)](https://sjtuyinjie.github.io/)*
 
 [![ C-Author](https://img.shields.io/badge/Author-Jie%20Yin-blue)](https://sjtuyinjie.github.io/)
 [![Dataset](https://img.shields.io/badge/Dataset-M2DGR-yellow)](https://github.com/SJTU-ViSYS/M2DGR)
