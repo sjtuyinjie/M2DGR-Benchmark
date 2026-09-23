@@ -38,7 +38,7 @@ make -j4
 ```
 source devel/setup.bash
 
-roslaunch lvi_sam my_run.launch
+roslaunch lvi_sam m2dgr_run.launch
 
 rosbag play door_02.bag
 ```
